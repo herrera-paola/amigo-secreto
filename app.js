@@ -29,3 +29,19 @@ function actualizarAmigo() {
         listaAmigo.appendChild(li);
     }
 }
+
+function sortearAmigo(){
+    if(amigos.length === 0){
+        alert('No hay amigos para mostar.');
+        return;
+    }
+
+    let amigoAleatorio = Math.floor(Math.random()* amigos.length);
+    console.log(amigoAleatorio);
+    console.log(amigos);
+
+    let amigoSorteado = amigos[amigoAleatorio];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li> ${amigoSorteado}</li>`;
+}
